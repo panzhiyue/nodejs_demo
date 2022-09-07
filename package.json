@@ -1,0 +1,14 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nodejs示例",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node ./src/index.mjs"
+  },
+  "dependencies": {
+    "dayjs": "1.11.5"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
