@@ -25,33 +25,41 @@ console.log(
 console.log("resolve : " + path.resolve("main.js")); //Z:\PZYDemo\NodeJS_Demo\SystemModule\path\main.js
 
 // 是否为绝对路径
-console.log("isAbsolute : " + path.isAbsolute("main.js"));
+console.log("isAbsolute : " + path.isAbsolute("main.js")); //false
 
 // 返回路径中代表文件夹的部分
 console.log(
-  "dirname : " + path.dirname("/test/test1//2slashes/1slash/tab/main.js")
+  "dirname : " + path.dirname("/test/test1//2slashes/1slash/tab/main.js") ///test/test1//2slashes/1slash/tab
 );
 
 // 返回路径中的最后一部分
 console.log(
   "basename : " + path.basename("/test/test1//2slashes/1slash/tab/main.js")
-);
+); //main.js
 console.log(
   "basename : " +
     path.basename("/test/test1//2slashes/1slash/tab/main.js", ".js")
-);
-console.log("basename : " + path.basename("/test/test1//2slashes/1slash/tab"));
+); //main
+console.log("basename : " + path.basename("/test/test1//2slashes/1slash/tab")); //tab
 
 // 路径中文件的后缀名
 console.log("extname : " + path.extname("main.js")); //.js
 
 // 返回路径字符串的对象
+//{
+//  root: '',
+//  dir: '',
+//  base: 'Z:\\PZYDemo\\NodeJS_Demo\\SystemModule\\pathmain.js',
+//  ext: '.js',
+//  name: 'Z:\\PZYDemo\\NodeJS_Demo\\SystemModule\\pathmain'
+//}
 console.log(
   "parse : ",
   path.parse("Z:\\PZYDemo\\NodeJS_Demo\\SystemModule\\pathmain.js")
 );
 
 // 从对象中返回路径字符串，和 path.parse 相反
+//test.js
 console.log(
   "format : " +
     path.format({ root: "", dir: "", base: "", ext: ".js", name: "test" })
